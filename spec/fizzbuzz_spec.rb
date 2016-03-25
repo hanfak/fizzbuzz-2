@@ -11,17 +11,14 @@ describe Fizzbuzz do
     it 'Does not return Fizz, if not divisible by 3' do
       expect(Fizzbuzz.new.game(8)).not_to eq 'Fizz'
     end
-  end
-end
 
-describe Fixnum do
-  describe '#divisible_by_3?' do
-    it 'returns true' do
-      expect(12.divisible_by_3?).to be true
+    it 'returns Buzz, if divisible by 5' do
+      expect(Fizzbuzz.new.game(5)).to eq 'Buzz'
     end
 
-    it 'returns false' do
-      expect(32.divisible_by_3?).to be false
-    end
+    # it 'Does not return Buzz, if not divisible by 5' do
+    #   expect(Fizzbuzz.new.game(17)).not_to eq 'Buzz'
+    # end
+
   end
 end
