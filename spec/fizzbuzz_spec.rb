@@ -30,9 +30,8 @@ describe Fizzbuzz do
       end
 
       it 'returns FizzBuzz 2nd case' do
-        expect(fizzbuzz.game(60)).to eq 'FizzBuzz' 
+        expect(fizzbuzz.game(60)).to eq 'FizzBuzz'
       end
-
     end
   end
 end
