@@ -4,7 +4,7 @@ describe Fizzbuzz do
   let (:fizzbuzz) {described_class.new}
 
   describe '#game' do
-    context 'divisib  le by 3' do
+    context 'divisible by 3' do
       it 'returns Fizz' do
         expect(fizzbuzz.game(3)).to eq 'Fizz'
       end
@@ -31,6 +31,12 @@ describe Fizzbuzz do
 
       it 'returns FizzBuzz 2nd case' do
         expect(fizzbuzz.game(60)).to eq 'FizzBuzz'
+      end
+    end
+
+    context 'other numbers' do
+      it 'returns the number if not divisible 3 or 5' do
+        expect(fizzbuzz.game(13)).to eq 13
       end
     end
   end
