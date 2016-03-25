@@ -29,9 +29,10 @@ describe Fizzbuzz do
         expect(fizzbuzz.game(45)).to eq 'FizzBuzz'
       end
 
-      # it 'Does not return FizzBuzz' do
-      #   expect(fizzbuzz.game(10)).not_to eq 'FizzBuzz'
-      # end
+      it 'returns FizzBuzz 2nd case' do
+        expect(fizzbuzz.game(60)).to eq 'FizzBuzz' 
+      end
+
     end
   end
 end
