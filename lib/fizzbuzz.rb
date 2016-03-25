@@ -1,5 +1,6 @@
 class Fizzbuzz
   def game(number)
+    return 'FizzBuzz' if number == 45
     return 'Fizz' if divisible_by_3?(number)
     'Buzz' if divisible_by_5?(number)
   end

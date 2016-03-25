@@ -4,7 +4,7 @@ describe Fizzbuzz do
   let (:fizzbuzz) {described_class.new}
 
   describe '#game' do
-    context 'divisible by 3' do
+    context 'divisib  le by 3' do
       it 'returns Fizz' do
         expect(fizzbuzz.game(3)).to eq 'Fizz'
       end
@@ -22,6 +22,16 @@ describe Fizzbuzz do
       it 'Does not return Buzz' do
         expect(fizzbuzz.game(17)).not_to eq 'Buzz'
       end
+    end
+
+    context 'divisible by 15' do
+      it 'returns FizzBuzz' do
+        expect(fizzbuzz.game(45)).to eq 'FizzBuzz'
+      end
+
+      # it 'Does not return FizzBuzz' do
+      #   expect(fizzbuzz.game(10)).not_to eq 'FizzBuzz'
+      # end
     end
   end
 end
