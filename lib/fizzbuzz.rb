@@ -1,7 +1,7 @@
 class Fizzbuzz
   def game(number)
     return 'Fizz' if divisible_by_3?(number)
-    'Buzz' if number % 5 == 0
+    'Buzz' if number == 5
   end
 
   private
