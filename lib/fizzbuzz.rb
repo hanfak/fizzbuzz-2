@@ -25,4 +25,9 @@ class Fizzbuzz
     end
 end
 
+# run this on command line
 # Fizzbuzz.new.game(3)
+# or
+# 1.upto(100).each do |num|
+#   puts Fizzbuzz.new.game(num)
+# end
