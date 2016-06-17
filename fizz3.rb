@@ -7,7 +7,7 @@ class Fizzbuzz
   end
 end
 
-def Fixnum
+class Fixnum
   def divisible_by_3?
     self.divisbile_by?(3)
   end
