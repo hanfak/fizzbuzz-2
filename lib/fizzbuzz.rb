@@ -1,27 +1,24 @@
 class Fizzbuzz
+  def initialize(checker)
+    @checker = checker
+  end
+
   def game(number)
-    return 'FizzBuzz' if divisible_by_15?(number)
-    return 'Fizz' if divisible_by_3?(number)
-    return 'Buzz' if divisible_by_5?(number)
-    number
+    return_fizzbuzz(number) || return_fizz(number) || return_buzz(number) || number
   end
 
   private
 
-    def divisible_by_3?(number)
-      divisbile_by?(number,3)
+    def return_fizzbuzz(number)
+      Array.new([number]).select{|num| @checker.divisible_by_15?(num)}.map{"FizzBuzz"}.first
     end
 
-    def divisible_by_5?(number)
-      divisbile_by?(number,5)
+    def return_fizz(number)
+      Array.new([number]).select{|num|  @checker.divisible_by_3?(num)}.map{"Fizz"}.first
     end
 
-    def divisible_by_15?(number)
-      divisbile_by?(number,15)
-    end
-    # unnecessary for private method to encapsulate further, but need to if public
-    def divisbile_by?(number,divisor)
-      number%divisor == 0
+    def return_buzz(number)
+      Array.new([number]).select{|num| @checker.divisible_by_5?(num)}.map{"Buzz"}.first
     end
 end
 

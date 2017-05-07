@@ -1,7 +1,8 @@
 require 'fizzbuzz'
+require 'divisibility_checks'
 
 describe Fizzbuzz do
-  let (:fizzbuzz) {described_class.new}
+  let (:fizzbuzz) {described_class.new(DivisibilityChecks.new)}
 
   describe '#game' do
     context 'divisible by 3' do
