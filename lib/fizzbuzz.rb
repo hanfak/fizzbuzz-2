@@ -4,21 +4,20 @@ class Fizzbuzz
   end
 
   def game(number)
-    return_fizzbuzz(number) || return_fizz(number) || return_buzz(number) || number
+    convert_to_fizz_buzz(number) || number
   end
 
   private
-
-    def return_fizzbuzz(number)
-      Array.new([number]).select{|num| @checker.divisible_by_15?(num)}.map{"FizzBuzz"}.first
+    def convert_to_fizz_buzz number
+      [converter(number, 3, 'Fizz'), converter(number, 5, 'Buzz')]
+        .compact
+        .inject(:+)
     end
 
-    def return_fizz(number)
-      Array.new([number]).select{|num|  @checker.divisible_by_3?(num)}.map{"Fizz"}.first
-    end
-
-    def return_buzz(number)
-      Array.new([number]).select{|num| @checker.divisible_by_5?(num)}.map{"Buzz"}.first
+    def converter(number, divisor, word)
+      [number].select{ |num| @checker.divisbile_by?(num, divisor) }
+              .map{ word }
+              .first
     end
 end
 
